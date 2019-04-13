@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background: #bbbbbb;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: aliceblue;
+    width: 100%;
+    list-style: none;
+}
+
+#pg1, #pg2, #pg3, #pg4, #pg5, #pg6 {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+}
+
+#pg1 {
+    background-color: blueviolet;
+}
+
+#pg2 {
+    background-color: burlywood;
+}
+
+#pg3 {
+    background-color: coral;
+}
+
+#pg4 {
+    background-color: rgb(154, 192, 50);
+}
+
+#pg5 {
+    background-color: rgb(158, 152, 209);
+}
+
+#pg6 {
+    background-color: rgb(243, 96, 145);
+}
+
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: blue;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-bottom: solid 2px sandybrown;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+nav li {
+    overflow: hidden;
+    height: 32px;
+}
+
+a.active::after{
+    transform: translateX(0%);
+}
